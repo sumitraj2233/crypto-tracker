@@ -1,4 +1,4 @@
-# 🚀 Live Demo: crytracker.netlify.app
+# 🚀 Live Demo: Open [crytracker.netlify.app](crytracker.netlify.app)
 
 # Getting Started with Create React App
 
