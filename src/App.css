@@ -1,0 +1,596 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+h6 {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+
+.home-icon {
+    font-size: 2rem; /* Increase font size for HomeIcon */
+}
+
+
+
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f8f9;
+    overflow-x: hidden;
+  }
+  
+  /* Sidebar Nav */
+  .sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #001d3d, #003566);
+    color: white;
+    padding: 2rem 1.5rem;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Navbar inside the sidebar */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+  }
+  
+  .logo p {
+    margin: 0;
+  }
+  
+  .menus {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  /* Menu Items */
+  .menu-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .menu-item a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: translateX(4px);
+  }
+  
+  /* Highlight for Active Link */
+  .menu-item a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  /* Icon size */
+  .menu-item svg {
+    font-size: 1.2rem;
+  }
+  
+  
+  /* Content */
+  .content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Routes & Footer */
+  .routes {
+    flex: 1;
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .footerLinks {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .footerLinks a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .footerLinks a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Header */
+  .header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 1rem 2rem;
+    z-index: 100;
+    position: sticky;
+    top: 0;
+  }
+  
+  /* Main Content */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+
+  
+/* .logo{
+    display: flex;
+    flex-direction: row;
+    color: blue;
+    align-items: center;
+} */
+
+.media{
+    max-width: 3rem;
+    max-height: 3rem;
+    object-fit: cover;
+}
+.sub-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.news-card{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+.cryptoDetails-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .MuiGrid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .stat-card {
+    flex: 1 1 45%;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+  
+  .crypto-left-header h4,
+  .crypto-right-header h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.3rem;
+  }
+  
+  .crypto-left-header h5,
+  .crypto-right-header h5 {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .crypto-left-body,
+  .crypto-right-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .crypto-left-body h6,
+  .crypto-right-body h6 {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .crypto-left-body svg,
+  .crypto-right-body svg {
+    margin-right: 0.6rem;
+    color: #0088cc;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .stat-card {
+      flex: 1 1 100%;
+    }
+  }
+
+
+  .cryptoDetails-header {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cryptoDetails-header h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0077cc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cryptoDetails-header h7 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+
+  .cryptoDetails-header h7 {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .cryptoDetails-footer {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cryptoDetails-footer h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0077cc;
+    margin-bottom: 1rem;
+  }
+  
+  .cryptoDetails-footer h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #0077cc;
+    line-height: 1.6;
+  }
+
+  .cryptoDetails-links {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cryptoDetails-links h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cryptoDetails-links .MuiGrid-container {
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  .cryptoDetails-links .MuiGrid-root {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #0077cc;
+    word-break: break-word;
+  }
+  
+  .cryptoDetails-links .MuiGrid-root:nth-of-type(1) {
+    font-weight: 600;
+    color: #333;
+  }
+  .cryptoDetails-links a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  .cryptoDetails-links a:hover {
+    text-decoration: underline;
+  }
+    
+  
+  .sub-header h5 {
+    font-weight: 500;
+    color: #001d3d;
+  }
+  
+  .sub-header a button {
+    background-color: #003566;
+    color: #fff;
+    text-transform: none;
+    font-weight: 500;
+    padding: 0.3rem 1rem;
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  
+  .sub-header a button:hover {
+    background-color: #001d3d;
+  }
+
+
+
+  /* Main wrapper */
+.cryptocurrencies {
+    padding: 2rem;
+    background-color: #f9fafb;
+    border-radius: 12px;
+  }
+/* Search box wrapper */
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  
+  /* Customize the MUI TextField */
+  .search-box .MuiTextField-root {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  /* Input field inside the text field */
+  .search-box input {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+  
+
+  .MuiCard-root {
+    border-radius: 16px !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.25s ease-in-out !important;
+    margin: 1rem auto;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .MuiCard-root:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+  }
+  
+  /* Card image */
+  .media {
+    object-fit: contain;
+    padding: 1rem;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+  
+  /* Card content */
+  .MuiCardContent-root {
+    padding: 1.2rem 1.5rem !important;
+    text-align: left;
+  }
+  
+  /* Text inside cards */
+  .MuiCardContent-root h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #001d3d;
+  }
+  
+  .MuiCardContent-root p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  /* Card action */
+  .MuiCardActions-root {
+    padding: 0 1.5rem 1rem !important;
+  }
+  
+  /* Button inside card */
+  .MuiCardActions-root a button {
+    background-color: #003566;
+    color: white;
+    text-transform: none;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: 0.3s ease;
+  }
+  
+  .MuiCardActions-root a button:hover {
+    background-color: #001d3d;
+  }
+
+  
+  
+
+  /* .lineChart {
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    overflow-x: auto;
+  }
+  
+  .lineChart-header {
+    margin-bottom: 1rem;
+  }
+  
+  .lineChart-content {
+    min-width: 800px;
+  } */
+
+
+  .chart-container {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .chart-info {
+    margin-bottom: 20px;
+  }
+  
+  .chart-info h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+  }
+  
+  .chart-info p {
+    font-size: 1rem;
+    color: #4b5563; /* Grayish tone */
+    margin: 0;
+  }
+  .hamburger{
+    display: none;
+  }
+
+
+  /* Mobile styles */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display:block;
+  }
+
+  .menus {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+    background-color: #003566;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+
+  .menus.open {
+    display: flex;
+  }
+
+  .menu-item a {
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+
+  .menu-item svg {
+    font-size: 1.1rem;
+  }
+
+  .app {
+    flex-direction: column;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
+
+
+  
